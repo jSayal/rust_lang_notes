@@ -165,7 +165,7 @@ fn main() {
 }
 ```
 
-## Option<T> Enum
+## OptionT&lt;T&gt; Enum
 
 Rust doest have any `null type`, but it does not mean that Rust cannot handle situations where value of a variable can be null. Intead of using null as a type, Rust uses `Option<T> enum`. Option<T> enum and its' variants `Some` and `None` are included in prelude.
 
@@ -180,7 +180,7 @@ enum Option<T> {
 }
 ```
 
-> <T> is basically generic type that we will discuss in later chapters. For now, <T> respresents any possible data type. It can be i8, i32, f64, String, &str etc. 
+> ```<T>``` is basically generic type that we will discuss in later chapters. For now, ```<T>``` respresents any possible data type. It can be i8, i32, f64, String, &str etc. 
 
 Basic use of Option variants.
 
@@ -199,7 +199,7 @@ fn main() {
 }
 ```
 
-Some of the methods in Rust's standard library returns Option<T> as return value.
+Some of the methods in Rust's standard library returns `Option<T>` as return value.
 
 ```rust
 //
@@ -217,7 +217,7 @@ fn main() {
 }
 ```
 
-We can return Option<T> from our own functions.
+We can return `Option<T>` from our own functions.
 
 ```rust
 //
@@ -240,9 +240,9 @@ fn get_occupation(name: &str) -> Option<&str> {
 }
 ```
 
-## Result<T, E>`
+## Result&lt;T,E&gt;
 
-Result<T, E> is an enum that is used for returning or propagating errors. Variants of this enum are Ok(T) and Err(E). There are many methods in standard library that returns this enum. One example is parsing string to number. If an action is successful Ok(T) is the return value, if there is an error, the result is Err<E>.
+`Result<T, E>` is an enum that is used for returning or propagating errors. Variants of this enum are Ok(T) and Err(E). There are many methods in standard library that returns this enum. One example is parsing string to number. If an action is successful Ok(T) is the return value, if there is an error, the result is Err<E>.
 
 ```rust
 fn main() {
